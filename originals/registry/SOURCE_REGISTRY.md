@@ -1,41 +1,38 @@
 # SOURCE_REGISTRY
 
-Register över källor som kunskapsbanken bygger på.  
-Uppdaterad: 2026-09-28
+Register över original. Inte filinnehåll.
 
-Originalfiler kopieras inte in i detta paket.
+**Uppdaterad:** 2026-09-28  
+**Regel:** SHA-256 beräknas där originalfilen finns lokalt. Saknas filen i denna miljö = `sha256` tom, `status` = `saknas_här`.
 
-## Indexfiler i projektet
+## Premium-källor (onboarding + projektplan)
 
-| Källa | Roll | Beslut |
-|-------|------|--------|
-| Master_Kallor_och_Bilagor_Paket.md (2026-05-11) | Masterlista över ISO-PDF och bilagor | Manuell granskning (upphovsrätt, DIS≠IS) |
-| Standard_References_Index.md (2026-05-11) | Katalog över uppladdade standarder | Manuell granskning / index |
-| standard_references_katalog.md | Kort katalog i KB | I `standards/` |
-| iso_kallor_index_oversikt.md | Översikt ISO-källor | I `standards/` |
+| source_id | filnamn | typ | sha256 | sekretess | beslut | status |
+|-----------|---------|-----|--------|-----------|--------|--------|
+| src-intro-nyanstalld-pdf-2026 | Introduktion_for_nyanstalld_2026_Premium.pdf | Original / Handbok | | intern / kommersiell | Ska användas (onboarding) | saknas_här |
+| src-intro-nyanstalld-docx-2026 | Introduktion_for_nyanstalld_2026_Premium.docx | Originalmall | | intern / kommersiell | Ska användas (onboarding) | saknas_här |
+| src-projektplan-impl-docx-2026 | Projektplan_ISO_9001_14001_Implementation_2026_Premium.docx | Originalmall | | intern / kommersiell | Ska användas (implementering) | saknas_här |
+| src-projektplan-9001-14001-docx-2026 | Projektplan_ISO_9001_14001_2026_Premium.docx | Originalmall | | intern / kommersiell | Kräver manuell granskning / ev. dubblett mot Implementation | saknas_här |
 
-## ISO-standarder (filer i `artifacts/Standarder/`)
+Fält att fylla när filen finns: `sha256`, `size_bytes`, `lagringsplats`.
 
-| Område | Status i KB |
-|--------|-------------|
-| ISO 9001:2015 + AMD 2024 + DIS 9001:2025 | PDF finns. ISO 9001:2026 publicerad 2026-09-16; paket har DIS. |
-| ISO 14001:2015 + AMD 2024 | PDF finns. ISO 14001:2026-PDF saknas. |
-| ISO 45001:2018 + AMD 2024 | PDF finns. |
-| ISO/IEC 27001:2022 + AMD 2024 | PDF finns. |
-| ISO 19011:2018 | PDF finns. |
-| AFS 2001:1 | Föråldrad mot AFS 2023:1. Se OUTDATED_CONTENT. |
+## Batchar (inte uppackad kunskap förrän Steg 2)
 
-## Förädlade paket redan i KB
+| source_id | batch | typ | beslut |
+|-----------|-------|-----|--------|
+| batch-kb-complete-2026-07-12 | QualityWorX_KnowledgeBase_Complete_2026-07-12.zip | Arkiv | Register only |
+| batch-onboarding-2026-07-25 | QualityWorks_Onboarding_Knowledge_2026-07-25.zip | Arkiv | Register only |
+| batch-onboarding-2026-07-26 | QualityWorks_Onboarding_Knowledge_Complete_2026-07-26.zip | Arkiv | Register only |
+| batch-kma-ucp-2026-07-12 | QualityWorX_KMA_UCP_KnowledgeBase_2026-07-12.zip | Arkiv | Register only |
+| batch-amp-2026-09-04 | KMA_Bygg_AMP_Paket_2026-09-04.zip | Arkiv / förädlad MD finns separat | Ska användas efter Steg 2-filter |
+| batch-fragobank-v2 | Fragobank_v2/ | Produktmallar | Manuell / delvis outdated klausul-språk |
+| batch-saas-2026-07-12 | Saas_Final_Paket_2026-07-12/ | Arkiv | Register only |
+| batch-saas-iso-2026-07-17 | SaaS_ISO_Paket_2026-07-17/ | Arkiv | Register only |
+| batch-standarder | Standarder/ | Standard (SIS) | Ej i git |
 
-| Paket | Datum | Mapp i detta paket |
-|-------|-------|--------------------|
-| Miljöplan-moduler | 2026-08-19 | `processed/miljo/` |
-| AMP-paket (19 MD) | 2026-09-04 | `processed/arbetsmiljo/` |
-| kb-batch ISO 9001:2026 / 14001 / frågebank | 2026-09-17 | `processed/kb/` |
-| Fragobank_v2 00–21 | 2026-09-19 | `products/_templates/` |
-| HR-onboarding | 2026-07 | `processed/hr-onboarding/` och `products/introduktion-nyanstalld/` |
+## Bearbetade moduler från Premium-onboarding
 
-## Steg 1 2026-09-19 (inga nya kb-filer)
+Se `processed/hr-onboarding/` och `processed/arbetsmiljo/`.  
+Källkoppling: `src-intro-nyanstalld-pdf-2026` / `src-intro-nyanstalld-docx-2026`.
 
-Kandidater till Steg 2: SAM <10 anställda, PDCA/SWOT-översikt.  
-Ej Steg 2: Kom igång, Q+E-manual, Master, Index, Processer.pptx.
+`arbetsmiljo_sakerhet.md` ska inte användas som SAM-kravkälla (AFS 2001:1). Se `registry/OUTDATED_CONTENT.md`.

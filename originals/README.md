@@ -1,9 +1,15 @@
-# Originals
+# originals/
 
-Denna mapp innehåller **inte** binära original (DOCX, PDF, PPTX, ZIP).
+Originalfiler lagras **inte** i git.
 
-Originalen ligger kvar i projektmappen `/home/workdir/artifacts/` och i `Standarder/`. De får inte ändras, skrivas över eller raderas.
+Licensierade ISO-PDF, Premium-DOCX/PDF och zip-batchar ligger lokalt/privat. Här finns bara registret.
 
-Här finns bara registret:
+Se `originals/registry/SOURCE_REGISTRY.md`.
 
-- `registry/SOURCE_REGISTRY.md` — vilka källor som matat kunskapsbanken
+Lägg inte in:
+
+- `Standarder/` (SIS-licens)
+- ISO 9001 / 14001 / 45001 / 27001-fulltext
+- kundunika filer
+- UI-mockups
+- app-template-kod

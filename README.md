@@ -1,40 +1,90 @@
-# Quality Works Knowledge Base
+# Quality WorX Knowledge Base
 
-Professionell kunskapsbank som Quality Works-appar hämtar från.
+**Version:** 1.0  
+**Status:** Förslag för godkännande  
+**Syfte:** Gemensam, källspårbar kunskapsgrund för Quality WorX Apps Platform, fristående produktappar, konsulter och framtida AI-stöd.
 
-Detta paket bygger inte appar. Det samlar förädlad Markdown från projektet.
+---
 
-**Paketdatum:** 2026-09-28  
-**Språk i apptext:** Enkelt svenska (krav/avsnitt, inte klausul).
+## 1. Vad detta projekt är
 
-## Appar som hämtar härifrån
+Quality WorX Knowledge Base ska samla, bevara, analysera, strukturera, kvalitetssäkra och förädla KvalitetsDokuments och KvalitetsGruppens kunskap.
 
-- Quality Works Light
-- Quality Works Small
-- QW Web / ISO Quiz
-- Miljöutredning
-- Egenkontroll
-- Arbetsmiljöplan / skyddsrond / riskbedömning
-- Dokumentgeneratorer, onboarding, revision, checklistor
+Kunskapsbanken ska kunna leverera:
 
-## Struktur
+- kvalitetssäkrat produktinnehåll
+- källhänvisningar
+- ordlistor och definitioner
+- frågebanker och stegbanker
+- innehållsblueprints
+- branschanpassningar
+- hjälptexter
+- appunderlag
+- underlag till Smart arbetsyta
+- underlag till framtida AI-funktioner
 
-```
+Projektet ska **inte bygga applikationskod**.
+
+---
+
+## 2. Grundprinciper
+
+- Originalfiler bevaras oförändrade.
+- Varje original får ett stabilt `source_id`.
+- Varje original får metadata och SHA-256-kontrollsumma.
+- Bearbetad kunskap lagras separat.
+- Bearbetad kunskap länkas tillbaka till ett eller flera `source_id`.
+- Inga original skrivs över.
+- Dubbletter, konflikter och versionsdrift dokumenteras.
+- Kundmaterial och licensierade standarder hanteras restriktivt.
+- Fulltext från licensierade standarder återges inte i onödan.
+- Innehåll får inte hittas på när källunderlag saknas.
+- Osäker information markeras tydligt.
+- Källan ska alltid kunna identifieras i efterhand.
+
+---
+
+## 3. Vad Knowledge Base stödjer
+
+Knowledge Base ska stödja:
+
+1. Quality WorX Apps Platform
+2. fristående Quality WorX-produktappar
+3. Quality WorX App Template
+4. Smart arbetsyta
+5. konsulter och interna projekt
+6. framtida AI-funktioner
+7. produktutveckling och utbildning
+
+Ingen enskild app ska äga den gemensamma kunskapen.
+
+---
+
+## 4. Rekommenderad struktur
+
+Se avsnitt 11 för den spegling som gäller i detta repo.
+
+---
+
+## 5–10
+
+Se styrpaketet i `standards/` och `source-briefs/`.
+
+---
+
+## 11. Denna repo-spegling (`PaddeFTW/quality-works-knowledge-base`)
+
+```text
 quality-works-knowledge-base/
 ├── README.md
-├── originals/
-│   ├── README.md
-│   └── registry/
-│       └── SOURCE_REGISTRY.md
+├── originals/          # bara register, inga PDF/DOCX
 ├── processed/
 │   ├── reports/
 │   ├── hr-onboarding/
 │   ├── arbetsmiljo/
 │   ├── forbattring/
-│   ├── ledning/
-│   ├── implementering/
-│   ├── miljo/
-│   └── kb/
+│   ├── ledning/        # tom tills MVP ledning
+│   └── implementering/
 ├── products/
 │   ├── _templates/
 │   └── introduktion-nyanstalld/
@@ -43,35 +93,5 @@ quality-works-knowledge-base/
 └── registry/
 ```
 
-## Vad som ligger var
-
-| Mapp | Innehåll |
-|------|----------|
-| `originals/registry/` | Register över källor. Originalfiler ligger kvar i projektmappen och kopieras inte hit. |
-| `processed/reports/` | Steg 1-rapporter: ANALYSIS_REPORT, CONTENT_INDEX, METADATA, DOCUMENT_CLASSIFICATION, DUPLICATES, OUTDATED_CONTENT, MANUAL_REVIEW |
-| `processed/hr-onboarding/` | Onboarding-moduler (HR) |
-| `processed/arbetsmiljo/` | SAM-relaterat + AMP-paket 2026-09-04 (Markdown) |
-| `processed/forbattring/` | Förbättringsverksamhet |
-| `processed/ledning/` | Ledningssystem, KMA-översikt, UCP |
-| `processed/implementering/` | ISO-projektplan och plattformsunderlag |
-| `processed/miljo/` | Miljöplan-moduler 2026-08-19 |
-| `processed/kb/` | MVP-moduler 2026-09-17 (ISO 9001:2026 / 14001, frågebank ägare) |
-| `products/_templates/` | Fragobank_v2 produktpaket 00–21 |
-| `products/introduktion-nyanstalld/` | Samma HR-onboarding som produktvy |
-| `standards/` | Katalog/index över ISO-källor (inte standard-PDF) |
-| `source-briefs/` | Korta källkopplingar |
-| `registry/` | Paketregister |
-
-## Hårda regler
-
-- Originalfiler ändras inte.
-- Upphovsrättsskyddad standardtext kopieras inte verbatim.
-- ISO-PDF ligger i `artifacts/Standarder/` (SIS-licens), inte i detta paket.
-- Föråldrat material är märkt i `processed/reports/OUTDATED_CONTENT.md`.
-- `arbetsmiljo_sakerhet.md` ska inte användas som SAM-kravkälla (AFS 2001:1).
-
-## MVP som fortfarande saknas
-
-kb-iso-9001-krav, kb-iso-14001-krav, kb-iso-45001-krav, kb-iso-27001-krav, kb-fragobank (kanon), kb-skyddsrond, kb-riskbedomning, kb-miljoaspekter-kemikalier, kb-laglista-efterlevnad, kb-internrevision-gap, kb-ledningens-genomgang.
-
-Delar täcks av AMP-paketet och miljöplan-MD utan MVP-id.
+Inga original-PDF/DOCX i `processed/`. Inga licensierade standarder i fulltext.  
+App-template ska peka på `processed/` + demo-fältkontrakt för **introduktion nyanställd**.

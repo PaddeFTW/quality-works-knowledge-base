@@ -1,38 +1,17 @@
-# Registry
+# registry/
 
-Paketregister för Quality Works Knowledge Base (2026-09-28).
+Inventering och spårbarhet.
 
-## Rapporter (källa till beslut)
+| Fil | Innehåll |
+|-----|----------|
+| CONTENT_INDEX.md | Moduler och appar |
+| DOCUMENT_CLASSIFICATION.md | En rad per källfil |
+| ANALYSIS_REPORT.md | Senaste Steg 1 (2026-09-19) |
+| ANALYSIS_REPORT_projektplan_2026-07.md | Projektplan-batch |
+| DUPLICATES.md | Dubbletter |
+| OUTDATED_CONTENT.md | Föråldrat mot AFS 2023 / ISO 2026 |
+| MANUAL_REVIEW.md | Manuell kö |
+| METADATA.md | Metadata |
+| FILE_MANIFEST.csv | SHA-256 för styrpaketet (standards + source-briefs) |
 
-Se `processed/reports/`:
-
-- ANALYSIS_REPORT.md
-- CONTENT_INDEX.md
-- METADATA.md
-- DOCUMENT_CLASSIFICATION.md
-- DUPLICATES.md
-- OUTDATED_CONTENT.md
-- MANUAL_REVIEW.md
-- MASTER_PROJECT_CONTEXT.md
-
-## Moduler per mapp
-
-| Mapp | Antal MD (ca) | Kommentar |
-|------|----------------|-----------|
-| processed/kb | 11 | MVP-batch 2026-09-17 |
-| processed/hr-onboarding | 12 | Onboarding |
-| processed/arbetsmiljo | 18 | AMP + arbetsmiljo_sakerhet (föråldrad SAM-källa) |
-| processed/miljo | 7 | Miljöplan 2026-08-19 |
-| processed/ledning | 11 | Ledning / KMA / UCP |
-| processed/implementering | 3 | Plan + arkitektur |
-| processed/forbattring | 1 | Förbättring |
-| processed/reports | 32 | Steg 1-leveranser inkl. batchrapporter |
-| products/_templates | 23 | Fragobank 00–21 |
-| products/introduktion-nyanstalld | 12 | Produktvy onboarding |
-| standards | 2 | Index, inte standardtext |
-| source-briefs | 1 | ISO-krav-mapping KMA |
-
-## Id-schema (kb)
-
-`kb-{domain}-{slug}`  
-Exempel: `kb-iso-termer-bygg`, `kb-fragobank-9001-agare`.
+Tomma 1 kB-skal per delpaket är inte med.
