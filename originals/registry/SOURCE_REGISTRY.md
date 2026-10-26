@@ -2,7 +2,7 @@
 
 Register över original. Inte filinnehåll.
 
-**Uppdaterad:** 2026-09-28  
+**Uppdaterad:** 2026-10-26  
 **Regel:** SHA-256 beräknas där originalfilen finns lokalt. Saknas filen i denna miljö = `sha256` tom, `status` = `saknas_här`.
 
 ## Premium-källor (onboarding + projektplan)
@@ -29,6 +29,21 @@ Fält att fylla när filen finns: `sha256`, `size_bytes`, `lagringsplats`.
 | batch-saas-2026-07-12 | Saas_Final_Paket_2026-07-12/ | Arkiv | Register only |
 | batch-saas-iso-2026-07-17 | SaaS_ISO_Paket_2026-07-17/ | Arkiv | Register only |
 | batch-standarder | Standarder/ | Standard (SIS) | Ej i git |
+
+## Produktstyrning 2026-10-26 (Master Källor + Index)
+
+| source_id | filnamn | typ | sha256 | sekretess | beslut | status |
+|-----------|---------|-----|--------|-----------|--------|--------|
+| src-master-kallor-bilagor-2026-05-11 | Master_Kallor_och_Bilagor_Paket.md | Index / AI-underlag | | intern | Ska användas | finns_i_source-briefs |
+| src-standard-references-index-2026-05-11 | Standard_References_Index.md | Index / Central referens | | intern | Ska användas | finns_i_source-briefs |
+| src-bilaga-a-produktkravsmatris-2026-10-26 | Bilaga_A_Produktkravsmatris.docx | Produktstyrning | | intern | Ska användas | finns_lokalt |
+| src-bilaga-b-produktkoncept-2026-10-26 | Bilaga_B_Produktkoncept.docx | Produktstyrning | | intern | Ska användas | finns_lokalt |
+| src-bilaga-c-saljmaterial-2026-10-26 | Bilaga_C_Saljmaterial.docx | Produktstyrning | | intern | Ska användas | finns_lokalt |
+| src-bilaga-d-utveckling-lansering-2026-10-26 | Bilaga_D_Utveckling_Lansering.docx | Produktstyrning | | intern | Ska användas | finns_lokalt |
+| src-bilaga-e-risker-compliance-2026-10-26 | Bilaga_E_Risker_Compliance.docx | Produktstyrning | | intern | Ska användas | finns_lokalt |
+
+Källbrief: `source-briefs/MASTER_KALLOR_SOURCE_BRIEF.md`  
+Bilagorna styr produktfunktioner mot ISO/AFS. AFS 2001:1 i index är föråldrad – mappa till AFS 2023:1.
 
 ## Bearbetade moduler från Premium-onboarding
 

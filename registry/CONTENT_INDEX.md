@@ -1,7 +1,7 @@
 # CONTENT_INDEX.md
 
 **Quality WorX Knowledge Base – Innehållsförteckning**  
-**Senast uppdaterad:** 2026-09-19
+**Senast uppdaterad:** 2026-10-26
 
 ---
 
@@ -71,3 +71,18 @@ Mapp `kma_bygg_amp_paket_2026/` (AMP, BAS-roller, 13 särskilda risker, riskmatr
 
 **Steg 1:** Klar för batch 2026-09-19.  
 **Steg 2:** Inte körda för 2026-09-19. Väntar godkännande av tröskelfilerna SAM <10 och PDCA-översikt.
+
+---
+
+## 5. Produktstyrning 2026-10-26 (Master Källor + Bilagor)
+
+Källor integrerade i `source-briefs/`:
+
+- `Master_Kallor_och_Bilagor_Paket.md` – komplett källpaket och laganalys.
+- `Standard_References_Index.md` – centralt nav (>70 dokument).
+- `MASTER_KALLOR_SOURCE_BRIEF.md` – användningsregler för produktutveckling.
+
+Bilagor A–E (kravmatris, produktkoncept, säljmaterial, utveckling/lansering, risker/compliance) styr funktioner mot ISO 9001/14001/45001/27001, AFS 2023:1, SOSFS 2011:9 och klimatändringar 2024.
+
+Beslut: Ska användas som styrunderlag. Äldre AFS 2001:1 och OHSAS märks outdated.  
+Nästa: Förädla prioriterade delar till MVP-moduler enligt Bilaga A och D.
