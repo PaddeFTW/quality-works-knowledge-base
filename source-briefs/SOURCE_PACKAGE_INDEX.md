@@ -20,9 +20,15 @@
 10. `PRODUCT_ACCESS_MODEL_SOURCE_BRIEF.md`
 11. `EXTERNAL_SALES_SOURCE_BRIEF.md`
 
+## Produktstyrning 2026-10-26
+
+12. `Master_Kallor_och_Bilagor_Paket.md`
+13. `Standard_References_Index.md`
+14. `MASTER_KALLOR_SOURCE_BRIEF.md`
+
 ## Underlag som fortfarande kräver verkliga original
 
-12. `COMMERCIAL_PRODUCT_ORIGINALS_SOURCE_REQUIREMENTS.md`
+15. `COMMERCIAL_PRODUCT_ORIGINALS_SOURCE_REQUIREMENTS.md`
 
 ## Viktigt
 
